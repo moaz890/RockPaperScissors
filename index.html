@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap" rel="stylesheet">
+
+  
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+  <div class="container">
+    <div class="wrapper flexcol">
+      <div class="score-board flexbet">
+        <ul>
+          <li class="text-mini">ROCK</li>
+          <li class="text-mini">PAPER</li>
+          <li class="text-mini">SCISSORS</li>
+          <li class="text-mini">LIZARD</li>
+          <li class="text-mini">SPOCK</li>
+        </ul>
+        <div class="score-result flexcol">
+          
+          <div class="text-mini">
+            <h4>score</h4>
+          </div>
+          <div class="text-large">
+            <h1 class="currentScore">0</h1>
+          </div>
+        
+        </div>
+      </div>
+      <div class="fight-space flexcol stepOne">
+        <div class="patagon">
+          <div class="image first-step" data-src="images/icon-scissors.svg" data-pick="scissors"><img src="images/icon-scissors.svg" alt=""></div>
+          <div class="image first-step" data-src="images/icon-spock.svg" data-pick="spock"><img src="images/icon-spock.svg" alt=""></div>
+          <div class="image first-step" data-src="images/icon-paper.svg" data-pick="paper"><img src="images/icon-paper.svg" alt=""></div>
+          <div class="image first-step" data-src="images/icon-lizard.svg" data-pick="lizard"><img src="images/icon-lizard.svg" alt=""></div>
+          <div class="image first-step" data-src="images/icon-rock.svg" data-pick="rock"><img src="images/icon-rock.svg" alt=""></div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="329" height="313" class="pentagon-svg">
+            <path fill="none" stroke="#000" stroke-width="15" d="M164.5 9.27L9.26 122.06l59.296 182.495h191.888L319.74 122.06 164.5 9.271z" opacity=".2"/>
+          </svg>
+        </div>
+        <div class="fight-start flex flexwrap">
+          <div class="image-back flexcol flexcenter" style="order: 1;">
+            <h2>You Pick</h2>
+            <div class="image user-pick"></div>
+          </div>
+          <div class="fight-result">
+            <h2></h2>
+            <a href="#" class="btn replay">Play Again</a>
+          </div>
+          <div class="image-back flexcol flexcenter" style="order: 2;">
+            <h2>The House Pick</h2>
+            <div class="image house-pick"></div>
+          </div>
+        </div>
+        <div class="rules-btn"><a href="#" class="btn">Rules</a></div>
+      </div>
+    </div>
+  </div>
+  <div class="popup rules-popup">
+    <div class="wrapper flex">
+      <div class="image">
+        <div class="image close-popup"><img src="images/icon-close.svg" alt=""></div>
+        <img src="images/image-rules-bonus.svg" alt="" srcset=""></div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
