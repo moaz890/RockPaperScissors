@@ -19,7 +19,7 @@ class UI {
         var housePick = this.fightStart.querySelector(".house-pick");
         var houseImg = document.createElement("img");
         houseImg.src = this.selectRandomImage();
-        housePick.dataset.pick = this.fightSpace.querySelector(`.image[data-src="${houseImg.src.slice(22)}"]`).dataset.pick;
+        housePick.dataset.pick = this.fightSpace.querySelector(`.image[data-src="${houseImg.src}"]`).dataset.pick;
         
         this.fightSpace.classList.remove("stepOne");
         var userPick = this.fightStart.querySelector(".user-pick");
