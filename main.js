@@ -19,6 +19,7 @@ class UI {
         var housePick = this.fightStart.querySelector(".house-pick");
         var houseImg = document.createElement("img");
         houseImg.src = this.selectRandomImage();
+        console.log(houseImg.src);
         housePick.dataset.pick = this.fightSpace.querySelector(`.image[data-src="${houseImg.src}"]`).dataset.pick;
         
         this.fightSpace.classList.remove("stepOne");
