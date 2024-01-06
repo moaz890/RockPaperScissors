@@ -73,8 +73,8 @@ function eventListeners(e) {
         }
     });
 
-    rulesBtn.addEventListener("click", function (e) {
-        e.preventDefault();
+    rulesBtn.addEventListener("click", function (event) {
+        event.preventDefault();
         ui.showRules();
     });
 
