@@ -19,8 +19,7 @@ class UI {
         var housePick = this.fightStart.querySelector(".house-pick");
         var houseImg = document.createElement("img");
         houseImg.src = this.selectRandomImage();
-        housePick.dataset.pick = this.fightSpace.querySelector(`.image[data-src="${houseImg.src.slice(22)}"]`).dataset.pick;
-        
+        housePick.dataset.pick = this.fightSpace.querySelector(`.image[data-src="${houseImg.src.slice(houseImg.src.indexOf("images"))}"]`).dataset.pick;        
         this.fightSpace.classList.remove("stepOne");
         var userPick = this.fightStart.querySelector(".user-pick");
         userPick.dataset.pick = pickedImage.dataset.pick;
@@ -40,8 +39,8 @@ class UI {
 }
 
 class Game{
-    constructor (pick) {
-        this.pick = pick;
+    constructor (p) {
+        this.pick = p;
         this.map = {
             rock: ["scissors", "lizard"],
             scissors: ["paper", "lizard"],
@@ -68,14 +67,14 @@ function eventListeners(e) {
     }
     currentScore.textContent = localStorage.getItem("score");
 
-    document.addEventListener("click", function (e) {
-        if (e.target.closest(".close-popup")){
+    document.addEventListener("click", function (event) {
+        if (event.target.closest(".close-popup")){
             ui.hideRules();
         }
     });
 
-    rulesBtn.addEventListener("click", function (e) {
-        e.preventDefault();
+    rulesBtn.addEventListener("click", function (event) {
+        event.preventDefault();
         ui.showRules();
     });
 
