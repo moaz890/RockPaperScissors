@@ -67,8 +67,8 @@ function eventListeners(e) {
     }
     currentScore.textContent = localStorage.getItem("score");
 
-    document.addEventListener("click", function (e) {
-        if (e.target.closest(".close-popup")){
+    document.addEventListener("click", function (event) {
+        if (event.target.closest(".close-popup")){
             ui.hideRules();
         }
     });
