@@ -39,8 +39,8 @@ class UI {
 }
 
 class Game{
-    constructor (pick) {
-        this.pick = pick;
+    constructor (p) {
+        this.pick = p;
         this.map = {
             rock: ["scissors", "lizard"],
             scissors: ["paper", "lizard"],
